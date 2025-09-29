@@ -132,7 +132,7 @@ const ChatInterface = () => {
               alt="ChartMaga Logo" 
               className="w-8 h-8 object-contain rounded-lg"
             />
-            <h1 className="text-2xl font-bold gradient-text">ChartMaga</h1>
+            <h1 className="text-2xl font-bold gradient-text">ChatMaga</h1>
           </div>
           <div className="flex items-center space-x-2">
             <Button variant="ghost" size="sm" onClick={startNewChat}>
