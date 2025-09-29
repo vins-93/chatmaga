@@ -170,7 +170,7 @@ const ChatInterface = () => {
               <div className="space-y-6">
                 <div className="space-y-2">
                   <h2 className="text-3xl font-semibold">
-                    What Can <span className="gradient-text">ChartMaga</span> Help You With Today?
+                    What Can <span className="gradient-text">ChatMaga</span> Help You With Today?
                   </h2>
                   <p className="text-muted-foreground">
                     Your intelligent AI assistant, ready to help with any task
