@@ -53,7 +53,7 @@ enable_confirmations = false
 [auth.email]
 enable_signup = true
 double_confirm_changes = true
-enable_confirmations = false
+enable_confirmations = true
 
 [edge_runtime]
 enabled = true
