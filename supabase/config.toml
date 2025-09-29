@@ -48,7 +48,7 @@ site_url = "https://chatmaga-ai-main.vercel.app/"
 additional_redirect_urls = ["https://chatmaga-ai-main.vercel.app/"]
 jwt_expiry = 3600
 enable_signup = true
-enable_confirmations = false
+enable_confirmations = true
 
 [auth.email]
 enable_signup = true
@@ -71,7 +71,7 @@ backend = "postgres"
 verify_jwt = false
 
 [functions.voice-to-text]
-verify_jwt = false
+verify_jwt = true
 
 [functions.image-analysis]
 verify_jwt = false
