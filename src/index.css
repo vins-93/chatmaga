@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ChatMaga Design System - Inspired by modern AI interfaces with blue/purple gradients */
+
+@layer base {
+  :root {
+    /* Base colors - Dark theme primary */
+    --background: 224 25% 8%;
+    --foreground: 210 40% 98%;
+
+    /* Card and surface colors */
+    --card: 224 25% 12%;
+    --card-foreground: 210 40% 98%;
+    --glass: 224 25% 12% / 0.8;
+
+    /* Primary brand colors - Blue gradient theme */
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 217 91% 70%;
+
+    /* Secondary accent colors */
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted colors for subtle elements */
+    --muted: 240 10% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Accent colors */
+    --accent: 260 70% 55%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 50%;
+    --warning: 38 92% 50%;
+
+    /* Border and input colors */
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 217 91% 60%;
+
+    /* Gradient definitions */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(260 70% 55%));
+    --gradient-secondary: linear-gradient(180deg, hsl(224 25% 8%), hsl(224 25% 12%));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(217 91% 60% / 0.3), transparent 70%);
+
+    /* Animations and effects */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(224 25% 5% / 0.5);
+
+    --radius: 0.75rem;
+  }
+
+  /* Light theme (optional fallback) */
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 224 25% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 25% 8%;
+    --glass: 0 0% 100% / 0.9;
+    --primary: 217 91% 50%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background: 
+      radial-gradient(ellipse at top left, hsl(217 91% 60% / 0.15), transparent 50%),
+      radial-gradient(ellipse at bottom right, hsl(260 70% 55% / 0.15), transparent 50%),
+      hsl(var(--background));
+  }
+
+  /* Glass morphism utility */
+  .glass {
+    background: hsl(var(--glass));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* Gradient text utility */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-glow));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
